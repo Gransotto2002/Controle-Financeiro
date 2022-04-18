@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Controle de despesas</title>
+  </head>
+  <body>
+    <div id="erro"></div>
+    <h2>Controle de despesas</h2>
+
+    <div class="container">
+      <h4>Saldo atual</h4>
+      
+      <h1 id="balance" class="balance">R$ 0.00</h1>
+
+      <div class="inc-exp-container">
+        <div>
+          <h4>Receitas</h4>
+          <p id="money-plus" class="money plus">+ R$0.00</p>
+        </div>
+
+        <div>
+          <h4>Despesas</h4>
+          <p id="money-minus" class="money minus">- R$0.00</p>
+        </div>
+      </div>
+
+      <h3 class="showTransactions">Transações</h3>
+      
+      <ul id="transactions" class="transactions"></ul>
+
+      <h3 class="addTransaction">Adicionar transação</h3>
+       <form id="form">
+        <div class="inputs">
+          <label for="radio1"><input name="tipo" id="radio1" type="radio" value="-" checked>Despesas</label>
+          <label for="radio2"><input name="tipo" id="radio2" type="radio" value="+" >Receitas</label>
+        </div>
+        <div class="form-control">
+          <label for="text">Nome</label>
+          <input autofocus type="text" id="text" placeholder="Nome da transação" />
+        </div>
+        <div class="form-control">
+          <label for="amount">Valor <br />
+          </label>
+          <input type="text" id="amount" placeholder="R$ 00,00" />
+        </div>
+        <button id="btn" class="btn">Adicionar</button>
+      </form>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
